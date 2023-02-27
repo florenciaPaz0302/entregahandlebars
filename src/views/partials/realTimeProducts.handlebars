@@ -1,0 +1,139 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 p-1">
+
+      <form action="#" method="post" class="py-2" id="addProduct">
+        <fieldset>
+          <legend>Información del producto</legend>
+          <p>
+            <label for="title">Title *</label>
+            <input
+              required
+              type="text"
+              class="form-control col-9"
+              id="title"
+              name="code"
+            />
+          </p>
+          <p>
+            <label for="description">Description *</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              id="description"
+              name="description"
+            />
+          </p>
+          <p>
+            <label for="code">Code *</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              id="code"
+              name="code"
+            />
+          </p>
+          <p>
+            <label for="price">Price *</label>
+            <input
+              required
+              type="number"
+              class="form-control"
+              id="price"
+              name="price"
+            />
+          </p>
+          <p>
+            <label for="stock">Stock *</label>
+            <input
+              required
+              type="number"
+              class="form-control"
+              id="stock"
+              name="stock"
+            />
+          </p>
+          <p>
+            <label for="category">Category *</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              id="category"
+              name="category"
+            />
+          </p>
+          <p>
+            <label for="thumbnails">Thumbnails</label>
+            <input
+              type="text"
+              class="form-control"
+              id="thumbnails"
+              name="thumbnails"
+            />
+          </p>
+          <p>
+            <input
+              type="submit"
+              value="Crear Producto"
+              id="submit"
+              class="btn btn-primary"
+            />
+          </p>
+        </fieldset>
+      </form>
+
+      <form id="deleteProduct">
+        <fieldset>
+          <legend><h2>Eliminar producto</h2></legend>
+          <div class="form-group my-2">
+            <div class="row">
+              <label for="pid" class="col-3 col-form-label">Product ID *</label>
+              <div class="col-9">
+                <input
+                  required
+                  type="number"
+                  class="form-control"
+                  id="pid"
+                  name="pid"
+                />
+              </div>
+            </div>
+          </div>
+          <p>
+            <input
+              type="submit"
+              value="Eliminar Producto"
+              id="submit"
+              class="btn btn-danger"
+            />
+          </p>
+        </fieldset>
+      </form>
+    </div>
+    <div class="col-6 p-2">
+      <h2>Lista de productos</h2>
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Code</th>
+            <th scope="col">Price</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Category</th>
+          </tr>
+        </thead>
+        <tbody id="productList">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/main.js"></script>
