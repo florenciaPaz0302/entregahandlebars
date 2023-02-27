@@ -16,12 +16,12 @@ socket.on("products", data => {
     data.forEach((producto) => {
         products = products + `<tr>
         <td> ${producto.id}            </td>
-        <td> ${producto.title}         </td>
-        <td> ${producto.description}   </td>
-        <td> ${producto.code}          </td>
-        <td> ${producto.price}         </td>
-        <td> ${producto.stock}         </td>
-        <td> ${producto.category}      </td>
+        <td> ${producto.Title}         </td>
+        <td> ${producto.Description}   </td>
+        <td> ${producto.Code}          </td>
+        <td> ${producto.Price}         </td>
+        <td> ${producto.Stock}         </td>
+        <td> ${producto.Category}      </td>
     </tr>`
     })
 
